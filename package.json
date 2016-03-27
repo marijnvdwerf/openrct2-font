@@ -1,0 +1,27 @@
+{
+  "name": "openrct-font",
+  "version": "0.1.0",
+  "description": "\"Vector\" font based on the original sprite glyphs",
+  "main": "build.js",
+  "dependencies": {
+    "libxmljs": "^0.17.1",
+    "lodash": "^4.6.1",
+    "svg-pathdata": "^1.0.3",
+    "svg2ttf": "^4.0.0",
+    "ttf2woff": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marijnvdwerf/openrct2-font.git"
+  },
+  "author": "Marijn van der Werf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marijnvdwerf/openrct2-font/issues"
+  },
+  "homepage": "https://github.com/marijnvdwerf/openrct2-font#readme"
+}
