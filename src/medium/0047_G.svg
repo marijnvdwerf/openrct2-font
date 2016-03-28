@@ -1,1 +1,3 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="crispEdges" width="10" height="12" viewBox="0 0 10 12"><g><path fill="rgba(96,125,139,1.00)" d="M3,1h4v1h-4ZM2,2h6v1h-6ZM1,3h3v1h-3ZM6,3h3v1h-3ZM1,4h2v2h-2ZM5,5h4v1h-4ZM1,6h3v1h-3ZM6,6h3v1h-3ZM2,7h6v1h-6ZM3,8h4v1h-4Z"></path></g></svg>
+<svg shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 12">
+    <path d="M9 4V3H8V2H7V1H3v1H2v1H1v4h1v1h1v1h4V8h1V7h1V5H5v1h1v1H4V6H3V4h1V3h2v1h3z"/>
+</svg>
