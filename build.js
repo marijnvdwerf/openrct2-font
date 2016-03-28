@@ -95,15 +95,25 @@ folders.forEach(function (folder) {
         if (paths.length === 0) {
             outFont.node('glyph').attr({unicode: char, 'horiz-adv-x': width});
             return;
-        } else if (paths.length > 1) {
-            console.error(filename + '(' + char + ') contains multiple paths.');
-            return;
         }
 
-        var pathElement = paths[0];
-        var combinedTransform = {x: 0, y: -(settings.ascent / scale)};
+        var pathData = null;
+        paths.forEach(function (element) {
+            var elementPath = new SVGPathData(element.attr('d').value());
 
-        var pathData = new SVGPathData(pathElement.attr('d').value());
+            if (pathData === null) {
+                pathData = elementPath;
+                return;
+            }
+
+            if (pathData.commands[pathData.commands.length - 1].type !== SVGPathData.CLOSE_PATH) {
+                pathData.commands.push({type: SVGPathData.CLOSE_PATH});
+            }
+
+            pathData.commands = _.concat(pathData.commands, elementPath.commands);
+        });
+
+        var combinedTransform = {x: 0, y: -(settings.ascent / scale)};
 
         pathData.commands.forEach(function (el) {
             if (el.x === undefined && el.y === undefined) {
